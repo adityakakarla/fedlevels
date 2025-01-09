@@ -3,7 +3,7 @@ import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async ({params}) => {
     const salaries = await pb.collection('salaries').getFullList({
-        filter: `company = '${params.slug}'`
+        filter: `company = '${params.slug}' && approved = true`
     });
     
     return {

@@ -19,7 +19,7 @@
 		'Solution Architect',
 		'IT',
 		'Data Analyst',
-		'Cyber',
+		'Security',
 		'DevOps'
 	];
 	const clearanceLevels = ['None','S', 'TS', 'TS/SCI', 'TS/SCI CIP', 'TS/SCI FSP'];
