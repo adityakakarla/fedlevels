@@ -17,10 +17,10 @@
 		'Product Manager',
 		'Data Scientist',
 		'Solution Architect',
-		'Information Technologist',
+		'IT',
 		'Data Analyst',
-		'Business Analyst',
-		'Cybersecurity Analyst'
+		'Cyber',
+		'DevOps'
 	];
 	const clearanceLevels = ['None','S', 'TS', 'TS/SCI', 'TS/SCI CIP', 'TS/SCI FSP'];
 
