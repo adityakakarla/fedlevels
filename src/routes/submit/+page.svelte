@@ -38,7 +38,7 @@
 
 <div class="flex w-full flex-col items-center">
 	{#if form?.success}
-		<p class="text-xl font-semibold text-emerald-600">Successfully Submitted</p>
+		<p class="text-xl font-semibold text-emerald-600">Thanks for sharing your salary! We'll take a look at what you sent.</p>
 	{:else}
 		<h1 class="text-3xl font-bold">Submit Your Salary</h1>
 		<form method="POST" class="mt-4 flex w-full max-w-md flex-col space-y-4">
