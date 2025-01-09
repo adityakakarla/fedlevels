@@ -22,7 +22,7 @@
 		'Business Analyst',
 		'Cybersecurity Analyst'
 	];
-	const clearanceLevels = ['S', 'TS', 'TS/SCI', 'TS/SCI CIP', 'TS/SCI FSP'];
+	const clearanceLevels = ['None','S', 'TS', 'TS/SCI', 'TS/SCI CIP', 'TS/SCI FSP'];
 
 	function validateForm() {
 		return (

@@ -3,7 +3,7 @@
 import { formatSalary } from '$lib/utils/formatting';
     let clearance = $state('TS/SCI FSP')
     let {data} = $props()
-    const clearanceLevels = ['S', 'TS','TS/SCI','TS/SCI CIP','TS/SCI FSP']
+    const clearanceLevels = ['None','S', 'TS','TS/SCI','TS/SCI CIP','TS/SCI FSP']
     const filteredSalaries = $derived(data.salaries.filter((salary) => salary.clearance === clearance))
 </script>
 
