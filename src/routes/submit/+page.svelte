@@ -125,7 +125,7 @@
                    hover:border-gray-400 focus:border-transparent focus:outline-none focus:ring-2
                    focus:ring-emerald-500 disabled:cursor-not-allowed
                    disabled:bg-gray-100"
-				   placeholder="Senior SDE"
+				   placeholder="L5"
 					required
 				/>
 			</label>
