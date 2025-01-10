@@ -13,7 +13,7 @@
 				<p class="text-lg">
 					{salary.role} @ {salary.company}
 				</p>
-				<p class="font-bold text-emerald-600">{formatSalary(salary.salary)}</p>
+				<p class="font-bold text-emerald-600">{formatSalary(salary.salary + salary.stock + salary.clearance_bonus + salary.annual_bonus + salary.signing_bonus)}</p>
 				<p class="text-sm text-gray-500">
 					{getTimeDifference(salary.created).description} ago • {salary.clearance} • {salary.yoe} YOE
 				</p>
