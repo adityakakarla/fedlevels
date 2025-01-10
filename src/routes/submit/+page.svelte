@@ -3,6 +3,10 @@
 
 	let company = $state('');
 	let salary = $state('');
+	let stock = $state('')
+	let clearance_bonus = $state('')
+	let annual_bonus = $state('')
+	let signing_bonus = $state('')
 	let role = $state('');
 	let level = $state('');
 	let yoe = $state('');
@@ -59,7 +63,7 @@
 			</label>
 
 			<label class="flex flex-col">
-				<span class="my-1 font-medium text-emerald-600">Salary</span>
+				<span class="my-1 font-medium text-emerald-600">Base Salary</span>
 				<input
 					bind:value={salary}
 					name="salary"
@@ -72,6 +76,74 @@
                    disabled:bg-gray-100"
 					required
 					placeholder="150000"
+				/>
+			</label>
+
+			<label class="flex flex-col">
+				<span class="my-1 font-medium text-emerald-600">Stock Comp</span>
+				<input
+					bind:value={stock}
+					name="stock"
+					type="number"
+					step="1"
+					class="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-2
+                   text-base
+                   hover:border-gray-400 focus:border-transparent focus:outline-none focus:ring-2
+                   focus:ring-emerald-500 disabled:cursor-not-allowed
+                   disabled:bg-gray-100"
+					required
+					placeholder="50000"
+				/>
+			</label>
+
+			<label class="flex flex-col">
+				<span class="my-1 font-medium text-emerald-600">Clearance Bonus</span>
+				<input
+					bind:value={clearance_bonus}
+					name="clearance_bonus"
+					type="number"
+					step="1"
+					class="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-2
+                   text-base
+                   hover:border-gray-400 focus:border-transparent focus:outline-none focus:ring-2
+                   focus:ring-emerald-500 disabled:cursor-not-allowed
+                   disabled:bg-gray-100"
+					required
+					placeholder="250000"
+				/>
+			</label>
+
+			<label class="flex flex-col">
+				<span class="my-1 font-medium text-emerald-600">Annual Bonus</span>
+				<input
+					bind:value={annual_bonus}
+					name="annual_bonus"
+					type="number"
+					step="1"
+					class="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-2
+                   text-base
+                   hover:border-gray-400 focus:border-transparent focus:outline-none focus:ring-2
+                   focus:ring-emerald-500 disabled:cursor-not-allowed
+                   disabled:bg-gray-100"
+					required
+					placeholder="10000"
+				/>
+			</label>
+
+			<label class="flex flex-col">
+				<span class="my-1 font-medium text-emerald-600">Signing Bonus</span>
+				<input
+					bind:value={signing_bonus}
+					name="signing_bonus"
+					type="number"
+					step="1"
+					class="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-2
+                   text-base
+                   hover:border-gray-400 focus:border-transparent focus:outline-none focus:ring-2
+                   focus:ring-emerald-500 disabled:cursor-not-allowed
+                   disabled:bg-gray-100"
+					required
+					placeholder="20000"
 				/>
 			</label>
 

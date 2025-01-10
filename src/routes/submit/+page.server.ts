@@ -6,6 +6,10 @@ export const actions: Actions = {
     const requestData = await request.formData();
     const company = requestData.get('company');
     const salary = requestData.get('salary');
+    const stock = requestData.get('stock')
+    const clearance_bonus = requestData.get('clearance_bonus')
+    const annual_bonus = requestData.get('annual_bonus')
+    const signing_bonus = requestData.get('signing_bonus')
     const role = requestData.get('role');
     const level = requestData.get('level');
     const yoe = requestData.get('yoe');
@@ -14,6 +18,10 @@ export const actions: Actions = {
     const data = {
       company,
       salary,
+      stock,
+      clearance_bonus,
+      annual_bonus,
+      signing_bonus,
       role,
       level,
       yoe,
