@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { formatSalary } from '$lib/utils/formatting.js';
 	import { getTimeDifference } from '$lib/utils/formatting.js';
 	let { data } = $props();
@@ -21,7 +22,7 @@
 			</div>
 		{/each}
 	</div>
-	<button class='border border-black hover:text-white hover:bg-emerald-600 transition duration-300 ease-in-out mt-8 px-4 py-2'>
+	<button class='border border-black hover:text-white hover:bg-emerald-600 transition duration-300 ease-in-out mt-8 px-4 py-2' onclick={async() => await goto('/submit')}>
 		Get Started
 	</button>
 </div>
