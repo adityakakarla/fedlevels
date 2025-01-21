@@ -7,16 +7,15 @@ import { formatSalary } from '$lib/utils/formatting';
     const filteredSalaries = $derived(data.salaries.filter((salary) => salary.clearance === clearance))
 </script>
 
-<h1 class='text-3xl font-bold'>Clearance</h1>
-<p class='mt-1'>Don't get ripped off</p>
+<h1 class='text-4xl font-light'>Clearance</h1>
 <div class="mt-4 relative w-48">
     <select 
       bind:value={clearance} 
       name="role" 
-      class="w-full bg-white border border-gray-300 rounded-lg px-4 py-2 text-base
+      class="w-full bg-transparent border border-gray-300 rounded-lg px-4 py-2 text-base
              hover:border-gray-400 
              focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
-             disabled:bg-gray-100 disabled:cursor-not-allowed
+             disabled:cursor-not-allowed
              appearance-none cursor-pointer relative"
       required
     >

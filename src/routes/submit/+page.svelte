@@ -44,15 +44,15 @@
 	{#if form?.success}
 		<p class="text-xl font-semibold text-emerald-600">Thanks for sharing your salary! We'll take a look at what you sent.</p>
 	{:else}
-		<h1 class="text-3xl font-bold">Submit Your Salary</h1>
+		<h1 class="text-4xl font-light">Submit Your Salary</h1>
 		<form method="POST" class="mt-4 flex w-full max-w-md flex-col space-y-4">
 			<label class="flex flex-col">
-				<span class="my-1 font-medium text-emerald-600">Company</span>
+				<span class="my-1 text-lg font-light">Company</span>
 				<input
 					bind:value={company}
 					name="company"
 					type="text"
-					class="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-2
+					class="w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-4 py-2
                    text-base
                    hover:border-gray-400 focus:border-transparent focus:outline-none focus:ring-2
                    focus:ring-emerald-500 disabled:cursor-not-allowed
@@ -63,13 +63,13 @@
 			</label>
 
 			<label class="flex flex-col">
-				<span class="my-1 font-medium text-emerald-600">Base Salary</span>
+				<span class="my-1 font-light text-lg">Base Salary</span>
 				<input
 					bind:value={salary}
 					name="salary"
 					type="number"
 					step="1"
-					class="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-2
+					class="w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-4 py-2
                    text-base
                    hover:border-gray-400 focus:border-transparent focus:outline-none focus:ring-2
                    focus:ring-emerald-500 disabled:cursor-not-allowed
@@ -80,13 +80,13 @@
 			</label>
 
 			<label class="flex flex-col">
-				<span class="my-1 font-medium text-emerald-600">Stock Comp</span>
+				<span class="my-1 text-lg font-light">Stock Comp</span>
 				<input
 					bind:value={stock}
 					name="stock"
 					type="number"
 					step="1"
-					class="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-2
+					class="w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-4 py-2
                    text-base
                    hover:border-gray-400 focus:border-transparent focus:outline-none focus:ring-2
                    focus:ring-emerald-500 disabled:cursor-not-allowed
@@ -97,13 +97,13 @@
 			</label>
 
 			<label class="flex flex-col">
-				<span class="my-1 font-medium text-emerald-600">Clearance Bonus</span>
+				<span class="my-1 text-lg font-light">Clearance Bonus</span>
 				<input
 					bind:value={clearance_bonus}
 					name="clearance_bonus"
 					type="number"
 					step="1"
-					class="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-2
+					class="w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-4 py-2
                    text-base
                    hover:border-gray-400 focus:border-transparent focus:outline-none focus:ring-2
                    focus:ring-emerald-500 disabled:cursor-not-allowed
@@ -114,13 +114,13 @@
 			</label>
 
 			<label class="flex flex-col">
-				<span class="my-1 font-medium text-emerald-600">Annual Bonus</span>
+				<span class="my-1 text-lg font-light">Annual Bonus</span>
 				<input
 					bind:value={annual_bonus}
 					name="annual_bonus"
 					type="number"
 					step="1"
-					class="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-2
+					class="w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-4 py-2
                    text-base
                    hover:border-gray-400 focus:border-transparent focus:outline-none focus:ring-2
                    focus:ring-emerald-500 disabled:cursor-not-allowed
@@ -131,13 +131,13 @@
 			</label>
 
 			<label class="flex flex-col">
-				<span class="my-1 font-medium text-emerald-600">Signing Bonus</span>
+				<span class="my-1 text-lg font-light ">Signing Bonus</span>
 				<input
 					bind:value={signing_bonus}
 					name="signing_bonus"
 					type="number"
 					step="1"
-					class="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-2
+					class="w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-4 py-2
                    text-base
                    hover:border-gray-400 focus:border-transparent focus:outline-none focus:ring-2
                    focus:ring-emerald-500 disabled:cursor-not-allowed
@@ -148,12 +148,12 @@
 			</label>
 
 			<label class="flex flex-col">
-				<span class="my-1 font-medium text-emerald-600">Role</span>
+				<span class="my-1 text-lg font-light ">Role</span>
 				<div class="relative">
 					<select
 						bind:value={role}
 						name="role"
-						class="relative w-full cursor-pointer appearance-none rounded-lg border border-gray-300 bg-white
+						class="relative w-full cursor-pointer appearance-none rounded-lg border border-gray-300 bg-transparent
                    px-4
                    py-2 text-base hover:border-gray-400 focus:border-transparent
                    focus:outline-none focus:ring-2
@@ -187,12 +187,12 @@
 			</label>
 
 			<label class="flex flex-col">
-				<span class="my-1 font-medium text-emerald-600">Level</span>
+				<span class="my-1 text-lg font-light ">Level</span>
 				<input
 					bind:value={level}
 					name="level"
 					type="text"
-					class="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-2
+					class="w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-4 py-2
                    text-base
                    hover:border-gray-400 focus:border-transparent focus:outline-none focus:ring-2
                    focus:ring-emerald-500 disabled:cursor-not-allowed
@@ -203,13 +203,13 @@
 			</label>
 
 			<label class="flex flex-col">
-				<span class="my-1 font-medium text-emerald-600">Years of Experience</span>
+				<span class="my-1 text-lg font-light">Years of Experience</span>
 				<input
 					bind:value={yoe}
 					name="yoe"
 					type="number"
 					step="1"
-					class="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-2
+					class="w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-4 py-2
                    text-base
                    hover:border-gray-400 focus:border-transparent focus:outline-none focus:ring-2
                    focus:ring-emerald-500 disabled:cursor-not-allowed
@@ -220,12 +220,12 @@
 			</label>
 
 			<label class="flex flex-col">
-				<span class="my-1 font-medium text-emerald-600">Clearance</span>
+				<span class="my-1 text-lg font-light">Clearance</span>
 				<div class="relative">
 					<select
 						bind:value={clearance}
 						name="clearance"
-						class="relative w-full cursor-pointer appearance-none rounded-lg border border-gray-300 bg-white
+						class="relative w-full cursor-pointer appearance-none rounded-lg border border-gray-300 bg-transparent
                    px-4
                    py-2 text-base hover:border-gray-400 focus:border-transparent
                    focus:outline-none focus:ring-2
