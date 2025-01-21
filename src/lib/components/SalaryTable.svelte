@@ -4,8 +4,8 @@
     let {salaries} = $props()
 </script>
 
-<div class='overflow-x-auto p-2 bg-transparent border border-stone-400 rounded-sm'>
-<Table class='text-black'>
+<div class='overflow-x-auto border border-stone-400 rounded-sm'>
+<Table class='text-black m-2'>
     <TableHead class='border-b text-center border-stone-400 text-xl'>
         <TableHeadCell class='py-2 px-4 border-r border-stone-400 font-light'>Company</TableHeadCell>
         <TableHeadCell class='py-2 px-4 border-r border-stone-400 font-light'>TC</TableHeadCell>
