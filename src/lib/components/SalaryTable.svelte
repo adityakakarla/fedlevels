@@ -26,14 +26,11 @@
         <TableBodyRow>
             <TableBodyCell class='py-1 px-2'>{salary.company}</TableBodyCell>
             <TableBodyCell class='py-1 px-2'>{formatSalary(salary.salary + salary.stock + salary.clearance_bonus + salary.annual_bonus + salary.signing_bonus)}</TableBodyCell>
-            <TableBodyCell class='py-1 px-2'>{(salary.stock === 0 &&
-                                                salary.clearance_bonus === 0 &&
-                                                salary.annual_bonus === 0 &&
-                                                salary.signing_bonus === 0) ? '': formatSalary(salary.salary)}</TableBodyCell>
-            <TableBodyCell class='py-1 px-2'>{salary.stock === 0 ? '' : formatSalary(salary.stock)}</TableBodyCell>
-            <TableBodyCell class='py-1 px-2'>{salary.clearance_bonus === 0 ? '' : formatSalary(salary.clearance_bonus)}</TableBodyCell>
-            <TableBodyCell class='py-1 px-2'>{salary.annual_bonus === 0 ? '': formatSalary(salary.annual_bonus)}</TableBodyCell>
-            <TableBodyCell class='py-1 px-2'>{salary.signing_bonus === 0 ? '': formatSalary(salary.signing_bonus)}</TableBodyCell>
+            <TableBodyCell class='py-1 px-2'>{formatSalary(salary.salary)}</TableBodyCell>
+            <TableBodyCell class='py-1 px-2'>{formatSalary(salary.stock)}</TableBodyCell>
+            <TableBodyCell class='py-1 px-2'>{formatSalary(salary.clearance_bonus)}</TableBodyCell>
+            <TableBodyCell class='py-1 px-2'>{formatSalary(salary.annual_bonus)}</TableBodyCell>
+            <TableBodyCell class='py-1 px-2'>{formatSalary(salary.signing_bonus)}</TableBodyCell>
             <TableBodyCell class='py-1 px-2'>{salary.role}</TableBodyCell>
             <TableBodyCell class='py-1 px-2'>{salary.level}</TableBodyCell>
             <TableBodyCell class='py-1 px-2'>{salary.yoe}</TableBodyCell>
