@@ -8,7 +8,7 @@ export const load: PageServerLoad = async ({params}) => {
     //     sort: '-created'
     // });
 
-    const {data, error} = await supabase.from("salaries").select().eq("company",params.slug).order("created", {ascending: false})
+    const {data, error} = await supabase.from("salaries").select().eq("company",params.slug).order("created", {ascending: false}).eq("approved", true)
     
     return {
         salaries: data,
