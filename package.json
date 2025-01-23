@@ -43,6 +43,8 @@
 		"zod": "^3.24.1"
 	},
 	"dependencies": {
+		"@supabase/ssr": "github:supabase/ssr",
+		"@supabase/supabase-js": "^2.48.0",
 		"flowbite-svelte": "^0.47.4",
 		"pocketbase": "^0.25.0",
 		"tailwind-scrollbar": "^3.1.0"

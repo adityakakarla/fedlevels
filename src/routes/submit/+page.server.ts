@@ -1,5 +1,8 @@
 import type { Actions, PageServerLoad } from './$types';
-import { pb } from '$lib/utils/pocketbase';
+// import { pb } from '$lib/utils/pocketbase';
+import { createClient } from '@supabase/supabase-js';
+import { PUBLIC_SUPABASE_URL } from '$env/static/public';
+import { SUPABASE_SERVICE_ROLE_KEY } from '$env/static/private';
 
 export const actions: Actions = {
   default: async ({ request }) => {
@@ -28,8 +31,16 @@ export const actions: Actions = {
       clearance,
     };
 
+    const serviceRoleSupabase = createClient(PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
+
+
+
     try {
-      await pb.collection('salaries').create(data);
+      // await pb.collection('salaries').create(data);
+      const{error} = await serviceRoleSupabase.from("salaries").insert(data)
+      if(error){
+        console.error(error)
+      }
       return {success: true}
     } catch (error) {
       console.error('Error submitting data:', error);

@@ -57,5 +57,5 @@ export function getTimeDifference(timestampStr: string): TimeDifference {
 }
 
 export function getDate(date: string){
-    return date.split(' ')[0]
+    return date.slice(0,10)
 }
