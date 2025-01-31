@@ -7,5 +7,5 @@
 
 <h1 class='font-light text-4xl'>{data.slug}</h1>
 <div class='mt-4'>
-  <SalaryTable salaries={data.salaries}/>
+  <SalaryTable salaries={data.salaries} authenticated={data.authenticated}/>
   </div>

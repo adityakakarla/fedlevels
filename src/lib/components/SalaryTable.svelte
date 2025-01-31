@@ -1,7 +1,8 @@
 <script>
+	import { goto } from "$app/navigation";
     import { formatSalary, getDate } from "$lib/utils/formatting";
     import {Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell} from 'flowbite-svelte'
-    let {salaries} = $props()
+    let {salaries, authenticated} = $props()
 </script>
 
 <div class='overflow-x-auto border border-stone-400 rounded-sm'>
@@ -39,4 +40,11 @@
         {/each}
     </TableBody>
 </Table>
+{#if !authenticated}
+        <div class='w-full text-center p-4 border-t border-stone-400 font-light'>
+            <button class='border border-black hover:text-white hover:bg-emerald-600 transition duration-300 ease-in-out px-4 py-2' onclick={async() => await goto('/submit')}>
+		🔐 Share Your Salary For Full Access
+	</button>
+        </div>
+        {/if}
 </div>

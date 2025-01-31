@@ -1,10 +1,10 @@
-<script>
+<script lang='ts'>
     import SalaryTable from '$lib/components/SalaryTable.svelte';
 import { formatSalary } from '$lib/utils/formatting';
     let clearance = $state('TS/SCI FSP')
     let {data} = $props()
     const clearanceLevels = ['None','S', 'TS','TS/SCI','TS/SCI CIP','TS/SCI FSP']
-    const filteredSalaries = $derived(data.salaries.filter((salary) => salary.clearance === clearance))
+    const filteredSalaries = $derived(data.salaries!.filter((salary) => salary.clearance === clearance))
 </script>
 
 <h1 class='text-4xl font-light'>Clearance</h1>
@@ -37,5 +37,5 @@ import { formatSalary } from '$lib/utils/formatting';
     </div>
   </div>
   <div class='flex flex-col space-y-2 mt-4'>
-    <SalaryTable salaries={filteredSalaries}/>
+    <SalaryTable salaries={filteredSalaries} authenticated={data.authenticated}/>
 </div>

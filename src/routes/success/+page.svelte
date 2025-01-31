@@ -1,0 +1,1 @@
+<h1 class='text-center'>Check your email for a confirmation link.</h1>

@@ -5,7 +5,7 @@ import { PUBLIC_SUPABASE_URL } from '$env/static/public';
 import { SUPABASE_SERVICE_ROLE_KEY } from '$env/static/private';
 
 export const actions: Actions = {
-  default: async ({ request }) => {
+  default: async ({ request, locals: {supabase, user}}) => {
     const requestData = await request.formData();
     const company = requestData.get('company');
     const salary = requestData.get('salary');
@@ -33,14 +33,15 @@ export const actions: Actions = {
 
     const serviceRoleSupabase = createClient(PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 
-
-
     try {
       // await pb.collection('salaries').create(data);
       const{error} = await serviceRoleSupabase.from("salaries").insert(data)
       if(error){
         console.error(error)
       }
+      await serviceRoleSupabase.from('submitted_emails').update({
+        id: user?.id,
+      })
       return {success: true}
     } catch (error) {
       console.error('Error submitting data:', error);

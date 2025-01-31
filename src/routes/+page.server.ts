@@ -1,5 +1,5 @@
 // import { pb } from "$lib/utils/pocketbase";
-import { supabase } from "$lib/utils/supabase";
+import { clientSupabase } from "$lib/utils/supabase";
 import type {PageServerLoad} from './$types'
 
 export const load: PageServerLoad = async() => {
@@ -8,7 +8,7 @@ export const load: PageServerLoad = async() => {
     //     sort: '-created'
     // })
 
-    const {data, error} = await supabase.from('salaries').select().order('created', {ascending: false}).limit(3).eq("approved", true)
+    const {data, error} = await clientSupabase.from('salaries').select().order('created', {ascending: false}).limit(3).eq("approved", true)
     
     return {
         salaries: (data as ArrayLike<any>)
